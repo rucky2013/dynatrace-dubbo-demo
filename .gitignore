@@ -7,6 +7,10 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+.settings/
+*.project
+*.classpath
+*.springBeans
 
 # =========================
 # Operating System Files
@@ -58,3 +62,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
