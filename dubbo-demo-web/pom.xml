@@ -5,7 +5,7 @@
 
 	<groupId>org.springframework.integration.samples</groupId>
 	<artifactId>dubbo-demo-web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>2.5.3</version>
 	<packaging>jar</packaging>
 
 	<name>dubbo-demo-web</name>
@@ -31,8 +31,14 @@
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
-			<artifactId>dubbo-demo-api</artifactId>
+			<artifactId>dubbo-demo-consumer</artifactId>
 			<version>2.5.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -45,13 +51,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-			<groupId>com.dynatrace</groupId>
-			<artifactId>dynatrace-dubbo</artifactId>
-			<version>6.3</version>
-			<scope>runtime</scope>	
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
